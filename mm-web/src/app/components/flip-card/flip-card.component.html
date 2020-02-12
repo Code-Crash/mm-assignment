@@ -1,0 +1,18 @@
+<!-- This will be flip card content -->
+<div class='card-container' id="card.card_id">
+    <div class='flippable-card' [ngClass]="{'flipped':flipped}">
+        <mat-card class='front' (click)="onClick()">
+            <mat-card-title>{{card.name}}</mat-card-title>
+            <mat-card-content>
+                <div>{{card.message}}</div>
+                <div>{{card.input | json}}</div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class='back'>
+            <mat-card-title>{{card.title}}</mat-card-title>
+            <mat-card-content>
+                <div *ngIf="card.result">{{card.result | json}}</div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

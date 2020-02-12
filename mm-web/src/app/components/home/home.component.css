@@ -1,0 +1,12 @@
+
+.row {
+    content: "";
+    display: block;
+    clear: both;
+    margin: 20px 0px;
+}
+
+.column {
+    float: left;
+    margin: 0px 6%;
+}

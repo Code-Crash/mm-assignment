@@ -1,0 +1,22 @@
+<!-- Header or Navigator -->
+<div style="background: #F2F2F2;">
+    <mat-toolbar color="warning">
+        <a routerLink="/" routerLinkActive="active">
+            Client Facing Interface
+        </a>
+        <span style="flex: 1 1 auto;"></span>
+    </mat-toolbar>
+</div>
+
+<!-- Cards with there event bindings -->
+<div class="row">
+    <app-flip-card [card]="identical" class="column" (flip)="process($event)" [type]="'identical'"
+        [onResult]="subjects.asObservable()">
+    </app-flip-card>
+    <app-flip-card [card]="sorted" class="column" (flip)="process($event)" [type]="'sorted'"
+        [onResult]="subjects.asObservable()">
+    </app-flip-card>
+    <app-flip-card [card]="balance" class="column" (flip)="process($event)" [type]="'balance'"
+        [onResult]="subjects.asObservable()">
+    </app-flip-card>
+</div>

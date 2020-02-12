@@ -1,0 +1,41 @@
+/* This file contains the css for flip card */
+
+
+.card-container {
+    width: 300px;
+    height: 270px;
+    position: relative;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+}
+
+.flippable-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    /* margin: 20% 0px; */
+}
+
+.flippable-card mat-card {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 252px;
+    height: 222px;
+    backface-visibility: hidden;
+}
+
+.flippable-card .back {
+    background: aquamarine;
+    transform: rotateY(180deg);
+}
+
+.flippable-card .front {
+    background: #f0f0f0;
+}
+
+.flippable-card.flipped {
+    transform: rotateY(180deg);
+}
